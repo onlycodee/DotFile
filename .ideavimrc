@@ -1,0 +1,75 @@
+call plug#begin()
+
+" List your plugins here
+Plug 'easymotion/vim-easymotion'
+
+call plug#end()
+let mapleader = ","
+
+""" Plugins ---------------------------------------------
+set easymotion
+set surround
+set multiple-cursors
+set commentary
+set ReplaceWithRegister
+set argtextobj
+set exchange
+set textobj-entire
+set highlightedyank
+set sneak
+set NERDTre
+set vim-paragraph-motio
+set textobj-indent
+
+" Plugins settings --------------------------------------
+let mapleader = ','
+let g:argtextobj_pairs="(:),{:},[:]"
+
+" Common settings
+set visualbell
+set noerrorbells
+set number relativenumber
+set nu rnu
+set ignorecase
+set smartcase
+set scrolloff=5 " 5 lines above/below cursor when scrolling
+set incsearch
+set hlsearch
+set clipboard+=unnamed
+set showmode
+set viminfo='100,f1
+
+" IDEA specific settings
+set ideajoin
+set ideaput
+set ideamarks
+set idearefactormode=keep
+
+" Map perso ---------------------------------------------
+nnoremap Y y$
+
+inoremap jj <Esc>
+vnoremap mm <Esc>
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <C-J> <C-W><C-J>
+nnoremap <C-K> <C-W><C-K>
+nnoremap <C-L> <C-W><C-L>
+nnoremap <C-H> <C-W><C-H>
+nnoremap H gT
+nnoremap L gt
+
+nnoremap n nzzzv
+nnoremap N Nzzzv
+nnoremap J mzJ`z
+
+nnoremap cn *Ncgn
+nnoremap <esc> :noh<return><esc>
+
+map D <Action>(ReformatCode)
+map <c-o> <Action>(Back)
+map <c-i> <Action>(Forward)
+
+map <Leader> <Plug>(easymotion-prefix)
